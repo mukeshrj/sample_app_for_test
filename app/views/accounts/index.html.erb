@@ -1,6 +1,6 @@
 <h1>Listing accounts</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Number</th>
@@ -16,7 +16,7 @@
     <% @accounts.each do |account| %>
       <tr>
         <td><%= account.number %></td>
-        <td><%= account.user_id %></td>
+        <td><%= account.user.email %></td>
         <td><%= account.name %></td>
         <td><%= link_to 'Show', account %></td>
         <td><%= link_to 'Edit', edit_account_path(account) %></td>
